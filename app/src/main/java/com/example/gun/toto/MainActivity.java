@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.gun.toto.api.SoccerUriBuilder;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -35,5 +37,17 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void requestSoccerUri(){
+        new SoccerUriBuilder()
+                .accesslevel("t")
+                .version("1")
+                .leagueGroup("eu")
+                .requestDailyBoxScore()
+                .year("2015")
+                .month("01")
+                .day("01")
+                .build();
     }
 }
