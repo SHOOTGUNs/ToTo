@@ -5,5 +5,4 @@ package com.example.gun.toto;
  */
 public class Sports_Info_container {
 
-      
 }
